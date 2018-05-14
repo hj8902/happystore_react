@@ -6,7 +6,7 @@ import { Tab, Menu } from 'semantic-ui-react';
 import Styles from './category.scss';
 
 import { actions } from './CategoryAction';
-import SearchAction from '../search/SearchAction';
+import { UPDATE as SEARCH } from '../search/SearchAction';
 
 const cx = ClassNames.bind(Styles);
 
@@ -88,7 +88,7 @@ const mapStateToProps = state => ({ items: state.category.items });
 // in component, disptch after triggering props
 const mapDispatchToProps = dispatch => ({
     index: () => dispatch(actions()),
-    search: category => dispatch(SearchAction.UPDATE.action({ category })),
+    search: category => dispatch(SEARCH.action({ category })),
 });
 
 // connect component with data layer

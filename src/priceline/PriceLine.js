@@ -6,7 +6,7 @@ import { Dropdown } from 'semantic-ui-react';
 import Styles from './priceline.scss';
 
 import { actions } from './PriceLineAction';
-import SearchAction from '../search/SearchAction';
+import { UPDATE as SEARCH } from '../search/SearchAction';
 
 const cx = ClassNames.bind(Styles);
 
@@ -59,7 +59,7 @@ const mapStateToProps = state => ({ items: state.priceline.items });
 // in component, disptch after triggering props
 const mapDispatchToProps = dispatch => ({
     index: () => dispatch(actions()),
-    search: priceline => dispatch(SearchAction.UPDATE.action({ priceline })),
+    search: priceline => dispatch(SEARCH.action({ priceline })),
 });
 
 // connect component with data layer

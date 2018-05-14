@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Checkbox } from 'semantic-ui-react';
 
-import SearchAction from '../search/SearchAction';
+import { UPDATE as SEARCH } from '../search/SearchAction';
 
 // component part
 class SaleButtonComponent extends React.Component {
@@ -35,7 +35,7 @@ const mapStateToProps = state => ({ sale: state.search.conditions.sale });
 
 // in component, disptch after triggering props
 const mapDispatchToProps = dispatch => ({
-    search: sale => dispatch(SearchAction.UPDATE.action({ sale })),
+    search: sale => dispatch(SEARCH.action({ sale })),
 });
 
 // connect component with data layer

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Pagination } from 'semantic-ui-react';
 
-import SearchAction from '../search/SearchAction';
+import { UPDATE as SEARCH } from '../search/SearchAction';
 
 // component part
 class PaginationComponent extends React.Component {
@@ -42,7 +42,7 @@ const mapStateToProps = state => ({ pagination: state.search.conditions.paginati
 
 // in component, disptch after triggering props
 const mapDispatchToProps = dispatch => ({
-    search: pagination => dispatch(SearchAction.UPDATE.action({ pagination })),
+    search: pagination => dispatch(SEARCH.action({ pagination })),
 });
 
 // connect component with data layer
