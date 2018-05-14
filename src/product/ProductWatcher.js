@@ -1,7 +1,7 @@
 import { all, call, put, takeLatest } from 'redux-saga/effects';
 
 import { FETCH_LIST, SHOW } from './ProductAction';
-import SearchAction from '../search/SearchAction';
+import { FETCH as FETCH_SEARCH } from '../search/SearchAction';
 
 import API from './ProductAPI';
 
@@ -22,7 +22,7 @@ function* watchFetchingProducts(action) {
     const { payload, error } = yield call(API.list, params);
     if (payload && !error) {
         yield put(FETCH_LIST.actions.success(payload));
-        yield put(SearchAction.FETCH.action(payload));
+        yield put(FETCH_SEARCH.action(payload));
     } else {
         yield put(FETCH_LIST.actions.fail(error));
     }
