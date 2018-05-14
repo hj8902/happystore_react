@@ -1,0 +1,17 @@
+.product {
+    &.list {
+
+    }
+
+    &.item {
+        .price {
+            ::before {
+                content: '₩';
+            }
+            
+            &.sale {
+                color: #db2828 !important;
+            }
+        }
+    }
+}

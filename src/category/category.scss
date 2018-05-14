@@ -1,0 +1,15 @@
+.category {
+    margin-bottom: 2em;
+    
+    .tab {
+        .menu {
+            display: inline-block;
+            border: none;
+            box-shadow: none;
+            
+            .item {
+                margin: 0;
+            }
+        }
+    }
+}
