@@ -63,6 +63,7 @@ This is the folder that contains all file related to domain.
 I referred to the two postings below.
 
 <https://reactjs.org/docs/faq-structure.html>
+
 <https://marmelab.com/blog/2015/12/17/react-directory-structure.html>
 
 By following above postings, I tried to remove complicated nesting structure and to keep the structure based on domain.
